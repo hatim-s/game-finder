@@ -1,5 +1,5 @@
-import { HStack, Image } from "@chakra-ui/react";
-import logo from "../assets/logo.png";
+import { HStack } from "@chakra-ui/react";
+import { GiConsoleController } from "react-icons/gi";
 import ColorModeSwitch from "./ColorModeSwitch";
 import SearchInput from "./SearchInput";
 
@@ -10,12 +10,7 @@ interface Props {
 const NavBar = ({ onSearch }: Props) => {
   return (
     <HStack padding="10px">
-      <Image
-        src={logo}
-        boxSize="60px"
-        borderRadius="10px"
-        background="transparent"
-      />
+      <GiConsoleController size="60px" />
       <SearchInput onSearch={onSearch} />
       <ColorModeSwitch />
     </HStack>
